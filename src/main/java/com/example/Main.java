@@ -127,6 +127,37 @@ public class Main {
 
     public static void ejercicio3() {
         System.out.println("Ejercicio 3");
+        int manzanas = 30;
+        int peras = 25;
+        int bananos = 20;
+        int[] ventasManzanas = { 5, 8, 10, 12, 4, 9, 7 };
+        int[] ventasPeras = { 6, 7, 9, 10, 5, 8, 6 };
+        int[] ventasBananos = { 4, 6, 5, 9, 3, 7, 8 };
+
+        for (int dia = 0; dia < 7; dia++) {
+            System.out.println("Día " + (dia + 1) + ":");
+
+            manzanas -= ventasManzanas[dia];
+            peras -= ventasPeras[dia];
+            bananos -= ventasBananos[dia];
+
+            if (manzanas < 10) {
+                manzanas += 50;
+                System.out.println("Pedido de manzanas (+50 unidades)");
+            }
+            if (peras < 10) {
+                peras += 50;
+                System.out.println("Pedido de peras (+50 unidades)");
+            }
+            if (bananos < 10) {
+                bananos += 50;
+                System.out.println("Pedido de bananos (+50 unidades)");
+            }
+
+            // Mostrar inventario del día
+            System.out.println(
+                    "Inventario -> Manzanas: " + manzanas + ", Peras: " + peras + ", Bananos: " + bananos + "\n");
+        }
     }
 
     public static void ejercicio4() {
@@ -338,7 +369,6 @@ public class Main {
 
     }
 
-
     public static void ejercicio7() {
         System.out.println("Ejercicio 7");
         int cardio = 10;
@@ -377,10 +407,10 @@ public class Main {
 
     public static void ejercicio8() {
         System.out.println("Ejercicio 8");
-        double[] temperatura = {37.5, 39.0, 38.7, 36.8, 37.9};
-        int[] presionS = {120, 150, 135, 145, 130};
-        int[] presionD = {80, 95, 85, 92, 88};
-        int[] dolor = {5, 9, 7, 8, 4};
+        double[] temperatura = { 37.5, 39.0, 38.7, 36.8, 37.9 };
+        int[] presionS = { 120, 150, 135, 145, 130 };
+        int[] presionD = { 80, 95, 85, 92, 88 };
+        int[] dolor = { 5, 9, 7, 8, 4 };
 
         for (int i = 0; i < 5; i++) {
             System.out.println("Paciente " + (i + 1) + ":");
@@ -392,15 +422,15 @@ public class Main {
             } else {
                 System.out.println("Clasificación: NORMAL");
             }
-    }
+        }
 
-     }   
+    }
 
     public static void ejercicio9() {
         System.out.println("Ejercicio 9");
-        double[] parciales = {3.8, 4.5, 3.0};
-        double[] proyecto = {4.0, 3.2, 2.8};
-        double[] participacion = {4.5, 3.5, 3.2};
+        double[] parciales = { 3.8, 4.5, 3.0 };
+        double[] proyecto = { 4.0, 3.2, 2.8 };
+        double[] participacion = { 4.5, 3.5, 3.2 };
 
         for (int i = 0; i < 3; i++) {
             double promedio = (parciales[i] * 0.3) + (proyecto[i] * 0.4) + (participacion[i] * 0.3);
@@ -416,13 +446,12 @@ public class Main {
             }
         }
     }
-    
 
     public static void ejercicio10() {
         System.out.println("Ejercicio 10");
-        int[] humedad = {25, 40, 55, 28, 45, 60, 35};
-        int[] temperatura = {22, 27, 24, 30, 20, 26, 23};
-        boolean[] lluvia = {false, false, true, false, false, false, true};
+        int[] humedad = { 25, 40, 55, 28, 45, 60, 35 };
+        int[] temperatura = { 22, 27, 24, 30, 20, 26, 23 };
+        boolean[] lluvia = { false, false, true, false, false, false, true };
 
         for (int i = 0; i < 7; i++) {
             System.out.println("Día " + (i + 1) + ":");
@@ -438,6 +467,5 @@ public class Main {
             }
         }
     }
-    
 
 }
